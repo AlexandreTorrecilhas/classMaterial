@@ -1,6 +1,11 @@
 import http2 from "http2";
 import express from "express";
 import fs from "fs";
+import dotenv from "dotenv";
+
+dotenv.config({path: "production_local.env"});
+
+console.log(process.env.PORT);
 
 const app = express();
 app.use(express.json());
